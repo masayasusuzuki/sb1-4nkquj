@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0a0a1f];
+    min-height: 100vh;
+  }
+}
+
+.glass-effect {
+  @apply bg-white/10 backdrop-blur-lg;
+}
+
+.magical-border {
+  @apply border border-[#00ffff]/20 shadow-lg;
+}
+
+.magical-button {
+  @apply bg-gradient-to-r from-[#00ffff] to-[#ff9900] text-white;
+}
+
+.magical-button:hover {
+  @apply from-[#00cccc] to-[#cc7a00];
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
